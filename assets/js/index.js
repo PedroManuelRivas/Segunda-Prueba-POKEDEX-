@@ -7,7 +7,8 @@ $(document).ready(function () {
 $("button").click(function () {
     let pokemon = $("#input").val()
     console.log(pokemon)
-    consultarAPI(pokemon)
+    var pokeConsulta = pokemon.toLowerCase()
+    consultarAPI(pokeConsulta)
 }
 )
 
