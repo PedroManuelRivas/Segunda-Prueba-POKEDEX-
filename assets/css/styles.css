@@ -1,0 +1,50 @@
+/* Aplicando fuente a toda la pagina web */
+
+* {
+    font-family: 'Press Start 2P', cursive;
+}
+
+/* Aplicando estilos a HeroSection */
+
+.heroSection {
+    background-image: url("../img/bannerPokedex.png");
+    background-size: cover;
+    background-position: center center;
+    height: 200px;
+}
+
+/* Aplicando background al body */
+
+/* #chartContainer {
+    background-color: green;
+    width: 290px !important;
+} */
+
+/* Estilo a fuente de caja Input */
+
+.pokeName {
+    color: red;
+}
+
+/* Estilo al DIV padre de las fotos */
+
+.principal {
+    padding-top: 30px;
+}
+
+#pokeActual {}
+
+#nextPoke {}
+
+.footer {
+    height: 50px;
+    background-color: #f83138;
+}
+
+.consulta {
+    padding-top: 10px;
+}
+
+#datosPokemon {
+    text-transform: capitalize;
+}
