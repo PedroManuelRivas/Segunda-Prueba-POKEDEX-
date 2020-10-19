@@ -7,12 +7,8 @@ $(document).ready(function () {
 $("button").click(function () {
     let pokemon = $("#input").val()
     var pokeConsulta = pokemon.toLowerCase()
-    // Validando que no ingresen número mayor a DB en API
-    if (pokemon >= 893) {
-        alert("Pokémon no existe en nuestra base de datos, por favor ingrese un número menor a 893")
-    } else {
-        consultarAPI(pokeConsulta)
-    }
+    consultarAPI(pokeConsulta)
+
 }
 )
 
@@ -43,8 +39,11 @@ function consultarAPI(nombrePokemon) {
             // Se ingresa información a tercer DIV, el cual muestra otras estadísticas de pokémon consultado
             $("#pokeStats").html(`<li><b>ID:</b> ${id}</li><li><b>Altura:</b> ${altura} m</li><li><b>Peso:</b> ${peso} Kg</li><li><b>Velocidad:</b> ${speed} Km</li><li class="mayusculas"><b>Tipo:</b> ${especieCapitalize}</li>`)
             // Se ingresa información a cuarto DIV, el cual muestra imágen de siguiente pokemon
-            $("#nextPoke").html(`<img data-toggle="tooltip" data-placement="top" title="Click para ver estadisticas de este pokemón" style="cursor: pointer; max-height: 200px" onclick="consultarAPI(${id + 1})" src="${fotoProx}" width="15%" alt="Imagen de Siguiente pokemon">`)
+            $("#nextPoke").html(`<img data-toggle="tooltip" data-placement="top" title="Click para ver estadisticas de este pokemón" style="cursor: pointer; max-height: 100px" onclick="consultarAPI(${id + 1})" src="${fotoProx}" width="100%" alt="Imagen de Siguiente pokemon">`)
             canvas(hp, defensa, ataque, ataqueEspecial, defensaEspecial)
+        },
+        error: function () {
+            alert(`Pokémon: ${nombrePokemon} no existe en nuestra base de datos. Consejo: Ingrese un ID <= a 893 o un nombre de pokémon válido`)
         },
         dataType: 'json',
     });
@@ -54,7 +53,7 @@ function consultarAPI(nombrePokemon) {
 function canvas(hp, defensa, ataque, ataqueEspecial, defensaEspecial, speed) {
     var chart = new CanvasJS.Chart("chartContainer", {
         theme: "light2", // "light2", "dark1", "dark2"
-        animationEnabled: false, // change to true		
+        animationEnabled: true, // change to true		
         title: {
             text: ""
         },

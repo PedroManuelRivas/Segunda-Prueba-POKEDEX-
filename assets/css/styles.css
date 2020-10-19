@@ -30,6 +30,10 @@
 
 #nextPoke {}
 
+#siguiente {
+    float: right;
+}
+
 .footer {
     height: 50px;
     background-color: #f83138;
@@ -46,3 +50,9 @@
 .mayusculas {
     text-transform: capitalize;
 }
+
+/* #nextPokePadre {
+    height: 300px;
+    background-color: turquoise;
+    border: 1px solid;
+} */
