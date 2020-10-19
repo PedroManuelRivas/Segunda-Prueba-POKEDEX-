@@ -68,7 +68,7 @@ function canvas(hp, defensa, ataque, ataqueEspecial, defensaEspecial, speed) {
                     { label: "Ataque", y: ataque },
                     { label: "Ataque Especial", y: ataqueEspecial },
                     { label: "Defensa Especial", y: defensaEspecial },
-                    { label: "Velocidad", y: speed },
+
                 ]
             }
         ]
