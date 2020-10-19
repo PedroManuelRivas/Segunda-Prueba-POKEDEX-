@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <!-- Agregando fuente Google -->
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
     <!-- Agregando estilo propio -->
     <link rel="stylesheet" href="./assets/css/styles.css">
     <title>Pokeapi</title>
@@ -24,17 +24,17 @@
     <!-- Seccion principal de la página -->
 
     <section class="principal container">
-        <p>Bienvenido entrenador. Desde esta página podrás consultar las estadísticas de los Pokemon. Ingresa en la caja
-            de texto, el nombre del Pokemon deseado o si conoces, su número de ID</p>
-        <h3 class="text-center">Ingrese nombre de Pokemon a consultar</h3>
+        <p>Bienvenido entrenador. Desde esta página podrás consultar las estadísticas de los Pokémon. Ingresa en la caja
+            de texto, el nombre del Pokémon deseado o si conoces, su número de ID</p>
+        <h3 class="text-center">Ingrese nombre de Pokémon a consultar</h3>
 
         <!-- Fin principal de la página -->
-        <!-- Creando input para tomar valor de pokemon a consultar -->
+        <!-- Creando input para tomar valor de Pokémon a consultar -->
         <div class="consulta row align-items-center">
             <div class="col-sm-10 col-md-10 col-lg-10">
                 <div class="input-group input-group-sm ">
                     <div class="input-group-prepend">
-                        <span class="input-group-text pokeName" id="inputGroup-sizing-sm">Nombre de Pokemon</span>
+                        <span class="input-group-text pokeName" id="inputGroup-sizing-sm">Nombre/ID de Pokémon</span>
                     </div>
                     <input type="text" id="input" class="form-control" aria-label="Small"
                         aria-describedby="inputGroup-sizing-sm">
@@ -44,28 +44,36 @@
             <div class="col-sm-2 col-md-2 col-lg-2">
                 <button type="button" class="btn btn-danger">Buscar</button>
             </div>
+
         </div>
 
 
 
-        <!-- Estos DIV contienen la gráfica y las imágenes de los Pokemon -->
+        <!-- Estos DIV contienen la gráfica y las imágenes de los Pokémon -->
 
         <div class="row align-items-center py-5" id="divPadre">
-            <!-- DIV que muestra pokemon seleccionado -->
+            <!-- DIV que muestra Pokémon seleccionado -->
             <div id="pokeActual" class="col-12 col-md-3 text-center"></div>
             <!-- DIV que muestra charts con stats -->
-            <div class="col-12 col-md-6 text-center">
-                Estadísticas de tu Pokemon
+            <div class="col-12 col-md-4 text-center">
+                Estadísticas de tu Pokémon
                 <div id="chartContainer" style="height: 300px; width: 100%;"></div>
             </div>
-            <!-- DIV que muestra siguiente pokemon -->
-            <div id="nextPoke" class="d-sm-block col-12 col-md-3 text-center"></div>
+            <!-- DIV que muestra estadisticas de Pokémon -->
+            <div class="d-sm-block col-12 col-md-3">
+                <ul id="pokeStats">
+                </ul>
+                <!-- <div class="col-sm-2 col-md-2 col-lg-2">
+                </div> -->
+            </div>
+            <!-- DIV que muestra siguiente Pokémon -->
+            <div class="d-sm-block col-12 col-md-2" id="nextPoke"></div>
         </div>
     </section>
 
     <!-- Creando footer -->
     <div class="footer">
-        <!-- <a href="www.desafiolatam.com"><img src="./assets/img/footerLatamBanner.png" alt=""></a> -->
+
 
     </div>
     <!-- Importando script de canvas -->

@@ -1,7 +1,8 @@
 /* Aplicando fuente a toda la pagina web */
 
 * {
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 30px;
 }
 
 /* Aplicando estilos a HeroSection */
@@ -12,13 +13,6 @@
     background-position: center center;
     height: 200px;
 }
-
-/* Aplicando background al body */
-
-/* #chartContainer {
-    background-color: green;
-    width: 290px !important;
-} */
 
 /* Estilo a fuente de caja Input */
 
@@ -46,5 +40,9 @@
 }
 
 #datosPokemon {
+    text-transform: capitalize;
+}
+
+.mayusculas {
     text-transform: capitalize;
 }
